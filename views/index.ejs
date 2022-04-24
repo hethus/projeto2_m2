@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/style.css" rel="stylesheet" />
+    <title>estudo - Home</title>
+  </head>
+  <body>
+    <%- include('./partials/header.ejs') %>
+    <main>
+      <h1>Pokédex</h1>
+
+      <section id="pokemons">
+        <% pokedex.forEach(pokemon => { %>
+        <a href="/detalhes/<%= pokemon.id %> ">
+          <article class="card">
+            <div class="nome__do__pokemon"><%= pokemon.nome %></div>
+            <div class="card_image">
+              <img
+                src="<%= pokemon.imagem %> "
+                alt="Imagem do pokemon <%= pokemon.nome %> "
+              />
+            </div>
+            <div class="status">
+              <div><%= pokemon.id %></div>
+              <div><%= pokemon.tipo %></div>
+            </div>
+          </article>
+        </a>
+        <% }) %>
+      </section>
+    </main>
+
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>

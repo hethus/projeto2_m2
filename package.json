@@ -1,0 +1,28 @@
+{
+  "name": "projeto2_m2",
+  "version": "1.0.0",
+  "description": "Criação de uma pokédex, com cadastro de novos pokémons e detalhes! Projeto educacional, feito para o curso de fullstack da Blue Edtech!",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -e js,html,css,ejs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hethus/projeto2_m2.git"
+  },
+  "author": "Giovanne Berteli Comba",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hethus/projeto2_m2/issues"
+  },
+  "homepage": "https://github.com/hethus/projeto2_m2#readme",
+  "dependencies": {
+    "ejs": "^3.1.7",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
