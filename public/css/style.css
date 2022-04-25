@@ -297,3 +297,7 @@ footer p a {
   color: rgb(162, 255, 0);
   font-weight: bold;
 }
+
+footer p a:hover {
+  color: rgb(140, 219, 3);
+}
