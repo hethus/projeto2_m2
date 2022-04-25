@@ -1,5 +1,8 @@
+import dotenv  from "dotenv"
 import express from "express";
 import path from "path";
+
+dotenv.config();
 
 const __dirname = path.resolve(path.dirname(""));
 const app = express();
@@ -49,7 +52,7 @@ const pokedex = [
   },
 ];
 
-const port = 3001;
+const port = process.env.PORT || 3001;
 app.listen(port, () => console.log(`running in ${port}`));
 
 app.get("/", (req, res) => {
