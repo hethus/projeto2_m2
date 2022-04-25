@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/css/style.css" rel="stylesheet" />
-    <link rel="icon" href="/img/ico.ico"/>
+    <link rel="icon" href="/img/ico.ico" />
     <title>Pokédex</title>
   </head>
   <body>
@@ -16,12 +16,15 @@
       <section>
         <div id="paragrafo">
           <p id="introducao">
-            Bem vindo(a) a pokédex! Aqui você pode encontrar informações sobre os 3 pokémons iniciais e também pode adicionar novos pokémons encontrados na aba de Cadastrar! Para mais informações do pokémon, clique em qualquer lugar dele.
+            Bem vindo(a) a pokédex! Aqui você pode encontrar informações sobre
+            os 3 pokémons iniciais e também pode adicionar novos pokémons
+            encontrados na aba de Cadastrar! Para mais informações do pokémon,
+            clique em qualquer lugar dele.
           </p>
         </div>
       </section>
 
-      <hr>
+      <hr />
 
       <section id="pokemons">
         <% pokedex.forEach(pokemon => { %>
@@ -33,10 +36,9 @@
                 src="<%= pokemon.imagem %> "
                 alt="Imagem do pokemon <%= pokemon.nome %> "
               />
-              <hr>
+              <hr />
             </div>
             <div class="status">
-              <div><%= pokemon.id %></div>
               <div><%= pokemon.tipo %></div>
             </div>
           </article>

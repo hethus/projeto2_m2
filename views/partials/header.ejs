@@ -4,21 +4,33 @@
         <ul>
             <a href="/"><li>Home</a></li></a>
             <a href="/cadastro"><li>Cadastro</li></a>
+
+            <div>
+                <label for="switch">
+                    <input type="checkbox" id="switch"> Dark Mode
+                </label>
+            </div>
         </ul>
     </nav>
-
-    <div>
-        <label for="switch">
-            <input type="checkbox" id="switch"> Dark Mode
-        </label>
-    </div>
 </header>
 
 <script>
-        const html = document.querySelector('html');
-const checkbox = document.querySelector('#switch');
+    const nightModeStorage = localStorage.getItem('gmtNightMode');
+    const nightMode = document.querySelector('#switch');
 
-checkbox.addEventListener('change', function() {
-    html.classList.toggle('dark-mode');
-})
+    if (nightModeStorage) {
+        document.documentElement.classList.add('night-mode');
+        nightMode.checked = true;
+    };
+
+
+    nightMode.addEventListener('click', () => {
+    document.documentElement.classList.toggle('night-mode')
+
+    if (document.documentElement.classList.contains('night-mode')) {
+        localStorage.setItem('gmtNightMode', true)
+        return
+    }
+    localStorage.removeItem('gmtNightMode')
+    });
 </script>

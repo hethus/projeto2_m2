@@ -1,55 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/style.css" rel="stylesheet">
-    <link rel="icon" href="/img/ico.ico"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/style.css" rel="stylesheet" />
+    <link rel="icon" href="/img/ico.ico" />
     <title>Detalhes <%= poke.nome %></title>
-</head>
-<body>
-    <%- include('./partials/header.ejs') %> 
+  </head>
+  <body>
+    <%- include('./partials/header.ejs') %>
     <main>
-        <section id="detalhes">
-        <h1><%= poke.nome %> </h1>
+      <section id="detalhes">
+        <h1><%= poke.nome %></h1>
 
         <div id="img">
-            <img src="<%= poke.imagem %>" alt="<%= poke.nome %>" />
+          <img src="<%= poke.imagem %>" alt="<%= poke.nome %>" />
         </div>
 
         <table>
-            <tr>
-                <thead>
-                    <th colspan="2">Detalhes</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>tipo:</td>
-                        <td><%= poke.tipo %> </td>   
-                    </tr>
+          <tr>
+            <thead>
+              <th colspan="2">Detalhes</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Tipo:</td>
+                <td><%= poke.tipo %></td>
+              </tr>
 
-                    <tr>
-                        <td>altura:</td>
-                        <td><%= poke.altura %> </td>
-                    </tr>
+              <tr>
+                <td>Categoria:</td>
+                <td><%= poke.categoria %></td>
+              </tr>
 
-                    <tr>
-                        <td>peso:</td>
-                        <td><%= poke.peso %> </td>
-                    </tr>
-                </tbody>
-            </tr>
+              <tr>
+                <td>Habilidade:</td>
+                <td><%= poke.habilidade %></td>
+              </tr>
+
+              <tr>
+                <td>Altura (em m):</td>
+                <td><%= poke.altura %></td>
+              </tr>
+
+              <tr>
+                <td>Peso (kg):</td>
+                <td><%= poke.peso %></td>
+              </tr>
+            </tbody>
+          </tr>
         </table>
 
         <div>
-            <h2>Descrição:</h2>
-            <p id="poke"><%= poke.descricao %></p>
+          <h2>Descrição:</h2>
+          <p id="poke"><%= poke.descricao %></p>
         </div>
-        </section>
+      </section>
     </main>
 
     <%- include('./partials/footer.ejs') %>
-    
-</body>
+  </body>
 </html>
