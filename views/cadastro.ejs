@@ -5,48 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/css/style.css" rel="stylesheet" />
+    <link rel="icon" href="/img/ico.ico"/>
     <title>Cadastro de pokémons</title>
   </head>
-  <body>
+  <body id="cas">
     <%- include('./partials/header.ejs') %>
 
     <main>
+      <section id="cadastro">
       <form method="post" action="/cadastro">
         <fieldset id="field_main">
           <legend>Cadastro de pokémons</legend>
+          <hr>
           <fieldset>
-            <input type="text" name="nome" />
+            <input type="text" name="nome" required/>
             <label for="nome">Nome</label>
           </fieldset>
 
-          <fieldset>
-            <input type="text" name="descricao" />
-            <label for="descricao">Descrição</label>
-          </fieldset>
+          <hr>
 
           <fieldset>
-            <input type="text" name="tipo" />
+            <input type="text" name="tipo" required/>
             <label for="tipo">Tipo</label>
           </fieldset>
 
+          <hr>
+
           <fieldset>
-            <input type="url" name="imagem" />
+            <input type="url" name="imagem" required/>
             <label for="imagem">Imagem</label>
           </fieldset>
 
+          <hr>
+
           <fieldset>
-            <input type="text" name="altura" />
+            <input type="text" name="altura" required/>
             <label for="altura">Altura</label>
           </fieldset>
 
+          <hr>
+
           <fieldset>
-            <input type="text" name="peso" />
+            <input type="text" name="peso" required/>
             <label for="peso">Peso</label>
+          </fieldset>
+
+          <hr>
+
+          <fieldset>
+            <textarea name="descricao" id="cade" cols="20" rows="5"></textarea>
+            <label for="descricao">Descrição</label>
           </fieldset>
 
           <button type="submit">Enviar</button>
         </fieldset>
       </form>
+    </section>
     </main>
 
     <%- include('./partials/footer.ejs') %>

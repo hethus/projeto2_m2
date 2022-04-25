@@ -6,4 +6,19 @@
             <a href="/cadastro"><li>Cadastro</li></a>
         </ul>
     </nav>
+
+    <div>
+        <label for="switch">
+            <input type="checkbox" id="switch"> Dark Mode
+        </label>
+    </div>
 </header>
+
+<script>
+        const html = document.querySelector('html');
+const checkbox = document.querySelector('#switch');
+
+checkbox.addEventListener('change', function() {
+    html.classList.toggle('dark-mode');
+})
+</script>

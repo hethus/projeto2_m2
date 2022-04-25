@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, "public")));
 const pokedex = [
     {
         id: 1,
-        nome: 'bulbasaur',
+        nome: 'Bulbasaur',
         descricao: 'There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.',
         tipo: 'grass',
         imagem: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png',
