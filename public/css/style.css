@@ -6,6 +6,8 @@
   --texto-geral: #000000;
 
   --cor-geral: rgb(141, 164, 37);
+
+  --cor-link: rgb(90, 90, 90);
 }
 
 .night-mode:root {
@@ -14,6 +16,8 @@
   --texto-geral: #ffffff;
 
   --cor-geral: rgb(93, 109, 24);
+
+  --cor-link: rgb(40, 39, 39);
 }
 
 * {
@@ -89,12 +93,12 @@ header a {
 }
 
 header a:hover {
-  color: rgb(90, 90, 90);
+  color: var(--cor-link);
   text-decoration: underline;
 }
 
 header a li:hover {
-  color: rgb(90, 90, 90);
+  color: var(--cor-link);
   text-decoration: underline;
 }
 
