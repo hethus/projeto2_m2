@@ -110,6 +110,10 @@ header nav div label {
   width: 112%;
 }
 
+header nav div label:hover {
+  color: var(--cor-link);
+}
+
 main {
   min-height: 80%;
   padding: 10px;
